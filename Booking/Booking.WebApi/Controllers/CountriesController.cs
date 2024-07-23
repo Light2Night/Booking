@@ -12,6 +12,11 @@ namespace Booking.Controllers;
 public class CountriesController : BaseApiController {
 	[HttpGet]
 	public async Task<IActionResult> GetAll() {
+
+		int i = 0;
+		i++;
+		i--;
+		int z = 2 / i;
 		var items = await Mediator.Send(new GetAllCountriesQuery());
 
 		return Ok(items);
